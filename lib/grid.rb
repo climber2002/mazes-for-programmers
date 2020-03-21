@@ -53,7 +53,7 @@ class Grid
       row.each do |cell|
         cell = Cell.new(-1, -1) unless cell
 
-        body = '   ' # <-- 3 spaces
+        body = " #{contents_of(cell)} "
         east_boundry = (cell.linked?(cell.east) ? ' ' : '|')
         top << body << east_boundry
 
@@ -67,6 +67,10 @@ class Grid
     end
 
     output
+  end
+
+  def contents_of(cell)
+    " "
   end
 
   private
