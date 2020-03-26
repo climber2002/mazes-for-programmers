@@ -38,6 +38,10 @@ class Cell
     list
   end
 
+  def neighbors
+    self.neighbours
+  end
+
   def distances
     distances = Distances.new(self)
     frontier = [ self ]
